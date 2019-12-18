@@ -52,6 +52,7 @@ function App() {
     <div>
       <ReactMapGL
         {...viewport}
+        onClick={(e) => console.log(`lng: ${e.lngLat[0]}, lat: ${e.lngLat[1]}`)}
         onViewportChange={(viewport) => setViewport({...viewport})}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
         mapStyle="mapbox://styles/sgillet/ck36sv6240as41dnxle37bzbb"
